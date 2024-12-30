@@ -450,3 +450,177 @@ def name(fname, mname, lname):
 
 print(name("James", "Buchanan", "Barnes"))
 
+
+
+def factorial(num):
+    if (num == 1 or num == 0):
+        return 1
+    else:
+        return (num * factorial(num - 1))
+    
+num = 5
+print("Factorial of ", num , " is ", factorial(num))
+
+
+#Modules
+import math
+print(math.sqrt(25))
+print(int(math.sqrt(25)))
+print(math.sin(30))
+print(math.tan(30))
+print(math.tan(90))
+
+#import module
+#import math as m
+# from module import add, sub
+#from module import *
+
+#dir() function
+import math
+list1 = dir(math)
+print(list1)
+
+
+
+#Creating a Class:
+
+class Details:
+    name = "Tarun"
+    age = 23
+    def sayHello(self):
+     print("hello")
+obj1 = Details()
+print(obj1.name)
+print(obj1.age)
+obj1.sayHello()
+
+
+#Self Method
+class Details:
+    name = "Simran"
+    age = 20
+
+    def desc(self):
+        print("My name is", self.name, "and I'm", self.age, "years old.")
+
+obj1 = Details()
+obj1.desc()
+
+
+#Coonstuctors
+
+class Details:
+    def __init__(self, animal,group):
+        self.animal = animal
+        self.group = group
+
+obj1 = Details("Lion", "Mammal")
+print(obj1.animal)
+print(obj1.group)
+
+
+
+#Python try...except
+try:
+    num = int(input("enter an integer"))
+except:
+    print("invalid input")
+
+
+#else block
+try:
+    num = int(input("enter an integer"))
+except:
+    print("invalid input")
+else:
+    print("Integer Accecpeted")
+
+#try...except...finally
+try:
+    num = int(input("Enter an integer: "))
+except ValueError:
+    print("Number entered is not an integer.")
+else:
+    print("Integer Accepted.")
+finally:
+    print("This block is always executed.")
+
+
+
+
+#Date & Time
+import time
+print(time.time())
+
+#These numbers are nothing but the number of ticks since the start of January 1, 1970 also called as epoch.
+
+#Now, one might ask what are ticks?
+
+# Ticks are floating point numbers measured in units of seconds for time interval.
+
+
+
+import time
+print(time.ctime()) #human readable format
+
+time.sleep(10) #it will delay execution 10 seconds
+
+print(time.localtime())
+
+
+
+#Calaender
+import calendar
+print(calendar.month(2025, 1))
+
+'''
+This is a multiline
+comment.
+'''
+
+
+#File Handling
+file = open("file.txt")
+print(file.read())
+
+
+ #write on to a file
+file = open('Text.txt', 'w')
+file.write("this is new text")
+file.close()
+
+ #read a file
+file = open('text.txt', 'r')
+print(file.read())
+file.close()
+
+    #append to a file
+file = open('text.txt', 'a')
+file.write("this is appended text")
+file.close()
+
+
+
+#Decorators
+ #regular function -
+def square(x):
+    return x*x
+square(5)
+
+#lambda function
+square_lambda = lambda x: x*x
+print(square_lambda(5))
+
+#lamda function with multiple arguments
+add = lambda a,b: a+b
+print(add(2,5))
+
+#Using lamda insider another function
+def multipleFunc(n):
+    return lambda a: a*n
+double = multipleFunc(2)
+print(double(4))
+
+
+#Decorators
+
